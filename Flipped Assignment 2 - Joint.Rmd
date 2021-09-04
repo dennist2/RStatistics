@@ -1,0 +1,182 @@
+---
+title: "Resting Heartrates (flipped assignment 2)"
+author: "Stephen Ratcliff, Kameron Garza, Forest Kingfisher"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+In this analysis, we analyze the resting heart rate data collected on 65 random males and 65 random females. We read the data from a Comma Separated Value (.csv) file posted to the web consisting of three data values per participant:
+
+* `Temp`: body temperature in Fahrenheit degrees), 
+* `Sex`: biological gender, either male = 1 or female = 2 
+* `Beats`: heart rate, in beats per minute
+
+
+```{r}
+#Import normtemp.csv from url
+dat <- read.csv("https://raw.githubusercontent.com/tmatis12/datafiles/main/normtemp.csv")
+```
+
+### Descriptive Statistics
+
+Summary statistics show that the mean and median averages are nearly equal,
+indicating that our distrubution is symetric and there is a good chance we can 
+use a normal distribution to approximate it. However, the first quartile is 
+closer to the average than the third, indicating some left-skew in the 
+distribution which may or may not be relevant. The minimum and maximum are 
+within three standard deviations of the average (between 56 and 90), so we have 
+no outliers to investigate. 
+
+
+```{r}
+malebeats = subset(dat,Sex==1)
+
+# Descriptive Statistics
+summary(malebeats$Beats)
+
+# Male Heart Rate Quartiles
+quantile(malebeats$Beats)
+
+# Sample Standard Deviation
+sd(malebeats$Beats)
+```
+
+### Histograms
+
+Our histogram shows some non-normality in a mostly symmetric distribution, which 
+we expect with a sample size of 65. Our density histogram confirms that the 
+sample distribution is roughly symmetrical and has a slight left-skew.
+
+
+```{r}
+# Male Heart Rate Histogram
+barplot(table(malebeats$Beats),xlab = "Heart Rate",ylab = "Frequency",col = "blue",main="Male Heart Rate")
+plot(density(malebeats$Beats),col="blue",main="smoothed histogram of heartrates - males")
+```
+
+### Normal Probability Plot
+
+Comparing the individual data values for heartrate to a theoretical average line 
+(qqnorm connects central quartiles), the data trends similar to this theoretical 
+linear approximation, apparent even without confidence intervals.
+
+```{r}
+# Male Heart Rate Normal Probability Plot
+qqnorm(malebeats$Beats,col = 'blue', main="Male Heart Rate Normal Probability Plot", ylab = "Heartrates")
+qqline(malebeats$Beats)
+```
+
+# Female Descriptive Statistics
+
+Summary statistics show that the mean and median averages are slightly 
+different, indicating that our distribution is not symetric. However, the 
+first quartile is almost exactly equidistant from the mean as the third, 
+indicating less skew in the overall distribution compared to the asymetry near 
+the mean. This bears more examination in the histograms. The minimum and maximum 
+are within three standard deviations of the mean (between 50 and 98) and 
+median (between 52 and 100), so we have no outliers to investigate. 
+
+```{r}
+femalebeats = subset(dat,Sex==2)
+
+# Descriptive Statistics
+summary(femalebeats$Beats)
+
+# Female Heart Rate Quantiles
+quantile(femalebeats$Beats)
+
+# Sample Standard Deviation
+sd(femalebeats$Beats)
+```
+
+### Histograms
+
+Our histogram shows a flat and wide normal-like distribution with a much more 
+distinct left skew than the male heartrate histogram. Our density histogram 
+confirms that the sample distribution is left-skewed but resembles the 
+distinctive bell-curve shape of a normal distribution.
+
+
+```{r}
+# Female Heart Rate Histogram
+barplot(table(femalebeats$Beats),xlab = "Heart Rate",ylab = "Frequency",col = "pink",main="Female Heart Rate")
+plot(density(femalebeats$Beats),col="pink",main="smoothed histogram of heartrates - females")
+
+```
+
+### Normal Probability Plot
+
+Comparing the individual data values for heartrate to a theoretical average line 
+(qqnorm connects central quartiles), the data trends similar to this theoretical 
+linear approximation, apparent even without confidence intervals.
+
+```{r}
+# Female Heart Rate Normal Probability Plot
+qqnorm(femalebeats$Beats,col = 'pink', main="Female Heart Rate Normal Probability Plot", ylab = "Heartrates")
+qqline(femalebeats$Beats)
+```
+
+# Male vs Female Box Plot Comparison
+
+These side by side box plots that compare the resting heart rate of males and 
+females illustrates the following comparisons in heartrate distributions:
+ * both plots are skewed left, so above average heartrates for both genders show less variance than lower heartrates
+ * The central quartiles for both genders clusters overlap, so average heartrates should be in similar ranges
+ * The heartrate range, and consequently variance, was larger for females than males
+ * The average heartrate was higher for females than males
+
+```{r}
+# boxplots comparing males' and females' heartrates
+boxplot(Beats~Sex, data = dat, col=c("blue","pink"), names = c("Male", "Female"),xlab = "Gender",ylab = "Heart Rates",main="Heartrate - Male Vs Female")
+```
+
+# Complete Code
+
+Here we display the complete R code used in this analysis.
+
+```{r complete R code, eval = FALSE}
+#Import normtemp.csv from url
+dat <- read.csv("https://raw.githubusercontent.com/tmatis12/datafiles/main/normtemp.csv")
+
+malebeats = subset(dat,Sex==1)
+
+# Descriptive Statistics
+summary(malebeats$Beats)
+
+# Male Heart Rate Quartiles
+quantile(malebeats$Beats)
+
+# Sample Standard Deviation
+sd(malebeats$Beats)
+
+# Male Heart Rate Histogram
+barplot(table(malebeats$Beats),xlab = "Heart Rate",ylab = "Frequency",col = "blue",main="Male Heart Rate")
+plot(density(malebeats$Beats),col="blue",main="smoothed histogram of heartrates - males")
+
+# Male Heart Rate Normal Probability Plot
+qqnorm(malebeats$Beats,col = 'blue', main="Male Heart Rate Normal Probability Plot", ylab = "Heartrates")
+qqline(malebeats$Beats)
+
+femalebeats = subset(dat,Sex==2)
+
+# Descriptive Statistics
+summary(femalebeats$Beats)
+
+# Female Heart Rate Quantiles
+quantile(femalebeats$Beats)
+
+# Sample Standard Deviation
+sd(femalebeats$Beats)
+
+# Female Heart Rate Histogram
+barplot(table(femalebeats$Beats),xlab = "Heart Rate",ylab = "Frequency",col = "pink",main="Female Heart Rate")
+plot(density(femalebeats$Beats),col="pink",main="smoothed histogram of heartrates - females")
+
+# Female Heart Rate Normal Probability Plot
+qqnorm(femalebeats$Beats,col = 'pink', main="Female Heart Rate Normal Probability Plot", ylab = "Heartrates")
+qqline(femalebeats$Beats)
+
+# boxplots comparing males' and females' heartrates
+boxplot(Beats~Sex, data = dat, col=c("blue","pink"), names = c("Male", "Female"),xlab = "Gender",ylab = "Heart Rates",main="Heartrate - Male Vs Female")
+
+```

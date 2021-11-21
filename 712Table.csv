@@ -1,0 +1,113 @@
+Putt,Putter,Break,Slope,Block, Distance
+10,Mallet,Straight,Level,1,10
+10,Mallet,Straight,Level,2,18
+10,Mallet,Straight,Level,3,14
+10,Mallet,Straight,Level,4,12.5
+10,Mallet,Straight,Level,5,19
+10,Mallet,Straight,Level,6,16
+10,Mallet,Straight,Level,7,18.5
+30,Mallet,Straight,Level,1,0
+30,Mallet,Straight,Level,2,16.5
+30,Mallet,Straight,Level,3,4.5
+30,Mallet,Straight,Level,4,17.5
+30,Mallet,Straight,Level,5,20.5
+30,Mallet,Straight,Level,6,17.5
+30,Mallet,Straight,Level,7,33
+10,Cavity back,Straight,Level,1,4
+10,Cavity back,Straight,Level,2,6
+10,Cavity back,Straight,Level,3,1
+10,Cavity back,Straight,Level,4,14.5
+10,Cavity back,Straight,Level,5,12
+10,Cavity back,Straight,Level,6,14
+10,Cavity back,Straight,Level,7,5
+30,Cavity back,Straight,Level,1,0
+30,Cavity back,Straight,Level,2,10
+30,Cavity back,Straight,Level,3,34
+30,Cavity back,Straight,Level,4,11
+30,Cavity back,Straight,Level,5,25.5
+30,Cavity back,Straight,Level,6,21.5
+30,Cavity back,Straight,Level,7,0
+10,Mallet,Breaking,Level,1,0
+10,Mallet,Breaking,Level,2,0
+10,Mallet,Breaking,Level,3,18.5
+10,Mallet,Breaking,Level,4,19.5
+10,Mallet,Breaking,Level,5,16
+10,Mallet,Breaking,Level,6,15
+10,Mallet,Breaking,Level,7,11
+30,Mallet,Breaking,Level,1,5
+30,Mallet,Breaking,Level,2,20.5
+30,Mallet,Breaking,Level,3,18
+30,Mallet,Breaking,Level,4,20
+30,Mallet,Breaking,Level,5,29.5
+30,Mallet,Breaking,Level,6,19
+30,Mallet,Breaking,Level,7,10
+10,Cavity back,Breaking,Level,1,6.5
+10,Cavity back,Breaking,Level,2,18.5
+10,Cavity back,Breaking,Level,3,7.5
+10,Cavity back,Breaking,Level,4,6
+10,Cavity back,Breaking,Level,5,0
+10,Cavity back,Breaking,Level,6,10
+10,Cavity back,Breaking,Level,7,0
+30,Cavity back,Breaking,Level,1,16.5
+30,Cavity back,Breaking,Level,2,4.5
+30,Cavity back,Breaking,Level,3,0
+30,Cavity back,Breaking,Level,4,23.5
+30,Cavity back,Breaking,Level,5,8
+30,Cavity back,Breaking,Level,6,8
+30,Cavity back,Breaking,Level,7,8
+10,Mallet,Straight,Downhill,1,4.5
+10,Mallet,Straight,Downhill,2,18
+10,Mallet,Straight,Downhill,3,14.5
+10,Mallet,Straight,Downhill,4,10
+10,Mallet,Straight,Downhill,5,0
+10,Mallet,Straight,Downhill,6,17.5
+10,Mallet,Straight,Downhill,7,6
+30,Mallet,Straight,Downhill,1,19.5
+30,Mallet,Straight,Downhill,2,18
+30,Mallet,Straight,Downhill,3,16
+30,Mallet,Straight,Downhill,4,5.5
+30,Mallet,Straight,Downhill,5,10
+30,Mallet,Straight,Downhill,6,7
+30,Mallet,Straight,Downhill,7,36
+10,Cavity back,Straight,Downhill,1,15
+10,Cavity back,Straight,Downhill,2,16
+10,Cavity back,Straight,Downhill,3,8.5
+10,Cavity back,Straight,Downhill,4,0
+10,Cavity back,Straight,Downhill,5,0.5
+10,Cavity back,Straight,Downhill,6,9
+10,Cavity back,Straight,Downhill,7,3
+30,Cavity back,Straight,Downhill,1,41.5
+30,Cavity back,Straight,Downhill,2,39
+30,Cavity back,Straight,Downhill,3,6.5
+30,Cavity back,Straight,Downhill,4,3.5
+30,Cavity back,Straight,Downhill,5,7
+30,Cavity back,Straight,Downhill,6,8.5
+30,Cavity back,Straight,Downhill,7,36
+10,Mallet,Breaking,Downhill,1,8
+10,Mallet,Breaking,Downhill,2,4.5
+10,Mallet,Breaking,Downhill,3,6.5
+10,Mallet,Breaking,Downhill,4,10
+10,Mallet,Breaking,Downhill,5,13
+10,Mallet,Breaking,Downhill,6,41
+10,Mallet,Breaking,Downhill,7,14
+30,Mallet,Breaking,Downhill,1,21.5
+30,Mallet,Breaking,Downhill,2,10.5
+30,Mallet,Breaking,Downhill,3,6.5
+30,Mallet,Breaking,Downhill,4,0
+30,Mallet,Breaking,Downhill,5,15.5
+30,Mallet,Breaking,Downhill,6,24
+30,Mallet,Breaking,Downhill,7,16
+10,Cavity back,Breaking,Downhill,1,0
+10,Cavity back,Breaking,Downhill,2,0
+10,Cavity back,Breaking,Downhill,3,0
+10,Cavity back,Breaking,Downhill,4,4.5
+10,Cavity back,Breaking,Downhill,5,1
+10,Cavity back,Breaking,Downhill,6,4
+10,Cavity back,Breaking,Downhill,7,6.5
+30,Cavity back,Breaking,Downhill,1,18
+30,Cavity back,Breaking,Downhill,2,5
+30,Cavity back,Breaking,Downhill,3,7
+30,Cavity back,Breaking,Downhill,4,10
+30,Cavity back,Breaking,Downhill,5,32.5
+30,Cavity back,Breaking,Downhill,6,18.5
+30,Cavity back,Breaking,Downhill,7,8

@@ -1,4 +1,4 @@
-Run,-A,B,C,D=AB,E=-AC,F=BC,G=-ABC,combination
+Run,-A,B,C,D=-AB,E=-AC,F=BC,G=-ABC,combination
 1,+,-,-,-,-,+,+,afg
 2,-,-,-,+,+,+,-,def
 3,+,+,-,+,-,-,-,adb
